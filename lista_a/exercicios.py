@@ -94,48 +94,47 @@ def primeiro_maior_que(lista, limite):
 
 def busca_binaria_primeira(lista, alvo):
     inicio = 0
-    fim = len(lista) - 1
-    posicao = -1
-
-    while inicio <= fim:
-        meio = (inicio + fim) // 2
+          fim = len(lista) - 1
+posicao = -1
+ while inicio <= fim:
+          meio = (inicio + fim) // 2
 
         if lista[meio] == alvo:
-            posicao = meio
-            fim = meio - 1
+posicao = meio
+     fim = meio - 1
 
-        elif lista[meio] < alvo:
-            inicio = meio + 1
+elif lista[meio] < alvo:
+                   inicio = meio + 1
 
         else:
-            fim = meio - 1
+     fim = meio - 1
 
-    return posicao
+           return posicao
 
 
 # ---------- Bloco 3: custo ----------
 
 def soma_pares_contando(lista):
     soma = 0
-    operacoes = 0
+          operacoes = 0
 
-    for numero in lista:
-        operacoes = operacoes + 1
+for numero in lista:
+            operacoes = operacoes + 1
 
         if numero % 2 == 0:
-            soma = soma + numero
+  soma = soma + numero
 
     return soma, operacoes
 
 
 def maior_contando(lista):
-    maior = lista[0]
+         maior = lista[0]
     comparacoes = 0
 
-    for i in range(1, len(lista)):
-        comparacoes = comparacoes + 1
+for i in range(1, len(lista)):
+             comparacoes = comparacoes + 1
 
-        if lista[i] > maior:
+ if lista[i] > maior:
             maior = lista[i]
 
     return maior, comparacoes
@@ -145,11 +144,11 @@ def tem_soma_contando(lista, alvo):
     comparacoes = 0
 
     for i in range(len(lista)):
-        for j in range(i + 1, len(lista)):
-            comparacoes = comparacoes + 1
+for j in range(i + 1, len(lista)):
+              comparacoes = comparacoes + 1
 
-            if lista[i] + lista[j] == alvo:
-                return True, comparacoes
+if lista[i] + lista[j] == alvo:
+         return True, comparacoes
 
     return False, comparacoes
 
